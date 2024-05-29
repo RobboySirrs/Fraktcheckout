@@ -1,3 +1,3 @@
-# Express.js fetch api
+# Express.js fetch api Node EJS
 
-A server that with express.js and ejs setup to fetch a sample api, display it on ejs page.
+Async call to 3 delivery companys in Sweden using promise.all to try to speed up the process, really just playing around
