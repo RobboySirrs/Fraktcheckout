@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+ <link rel="stylesheet" href="style.css">
+  <head>
+   <style>
+         </style>
+    
+   
+    <body>
+      <h1>LeveransCheckout!</h1>
+      <center>Sök på ditt postnummer för att hitta vart du kan få ditt paket levererat.</center>
+              <p class="loader" id="laddar" style="visibility: hidden"></p>
+
+      <div class="div3">
+       
+      <input
+          autocomplete="off"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          style="display: inline"
+          type="number"
+          id="myText"
+          min="0"
+          max="199999"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          width="100px"
+          maxlength="5"
+          placeholder="Postnummer"
+          
+        />      <span id="fel"></span>
+        <p>
+          
+        </p>
+        
+      <div id="postnord" style="display: none">
+                <img style="float: right;" width="20%" height="20%" src="https://cdn.glitch.global/4ad21738-6cd2-4c12-a435-2cc943699245/postnord-stor-logo-blogg.webp?v=1659695488633" />
+
+          <input
+            type="Radio"
+            onclick="visaKlar();"
+            class="example"
+            name="frakt"
+            id="MYP"
+            value="postnordval"
+          /><b>Postombud 39kr</b>
+        
+       <br>Levereras inom 2-3 vardagar. V&auml;lj ombud/paketbox nedan. <br />
+        <select id="postnordval" class="dropdown-content"></select>
+      </div>
+
+      <div id="instabox" style="display: none">
+                <img style="float: right;" width="20%" height="20%" src="https://cdn.glitch.global/4ad21738-6cd2-4c12-a435-2cc943699245/instabox.png?v=1659695495491" />
+
+          <input
+            type="Radio"
+            onclick="visaKlar();"
+            class="example"
+            name="frakt"
+            id="INS"
+            value="instaboxval"
+          />
+        <b>Instabox 29kr</b><br>
+                
+        Levereras inom 1-2 vardagar. V&auml;lj paketbox nedan.<br />
+        <select id="instaboxval" class="dropdown-content"></select>
+      </div>
+
+      <div id="budbee" style="display: none">
+        <img style="float: right;" width="20%" height="20%" src="https://cdn.glitch.global/4ad21738-6cd2-4c12-a435-2cc943699245/budbee.png?v=1659695501268" />
+
+          <input
+            type="Radio"
+            onclick="visaKlar();"
+            class="example"
+            name="frakt"
+            id="BUD"
+            value="budbeeval"
+          /><b>Budbee 29kr</b><br>
+                
+        Levereras inom 1-2 vardagar. V&auml;lj paketbox nedan.<br />
+        <select id="budbeeval" class="dropdown-content"></select>
+      </div>
+
+      <div id="varubrev" style="display: none">
+        <img style="float: right;" width="20%" height="20%" src="https://cdn.glitch.global/4ad21738-6cd2-4c12-a435-2cc943699245/postnord-stor-logo-blogg.webp?v=1659695488633" />
+
+          <input
+            type="Radio"
+            onclick="visaKlar();"
+            class="example"
+            name="frakt"
+            id="VB"
+            value="varubrevval"
+          /><b>Varubrev 19kr</b><br>
+                
+        Levereras inom 1-2 vardagar. I brevladan<br><br><br>
+      </div>
+      
+        <button
+          class="button"
+          style="visibility: hidden"
+          onclick="visa();"
+          id="order"
+        >
+          Best&auml;ll
+        </button>
+      </div>
+      <select
+        id="varubrevval"
+        style="visibility: hidden "
+        class="dropdown-content"
+      ></select>
+  
+     <script src="script.js"></script>
+       
+
+    </body>
+  </head>
+</html>
